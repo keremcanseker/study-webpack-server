@@ -1,18 +1,6 @@
 {
   "employees": [
     {
-      "name": "ahmet",
-      "department": "advertise",
-      "salary": 2000,
-      "id": 1
-    },
-    {
-      "name": "kero",
-      "department": "king",
-      "salary": 4000,
-      "id": 2
-    },
-    {
       "name": "ali",
       "department": "management",
       "salary": 5000,
@@ -23,6 +11,23 @@
       "department": "benim yanim",
       "salary": 5000,
       "id": 4
+    },
+    {
+      "name": "keremcan",
+      "department": "mudur",
+      "id": 5
+    },
+    {
+      "name": "kerem",
+      "department": "esogu",
+      "salary": 5000,
+      "id": 6
+    },
+    {
+      "name": "keremcan",
+      "department": "ev",
+      "salary": 1000,
+      "id": 7
     }
   ]
 }

@@ -6,7 +6,7 @@ const nameInput = document.getElementById("name");
 const departmentInput = document.getElementById("department")
 const salaryInput = document.getElementById("salary");
 const employeesList = document.getElementById("employees");
-const updateEmployeeButton = document.getElementById("update");
+
 
 const request = new Request("http://localhost:3000/employees");
 
@@ -38,7 +38,10 @@ eventListeners();
 
 function eventListeners() {
     document.addEventListener("DOMContentLoaded", getAllEmployees);
-    form.addEventListener("submit", addEmployee)
+    form.addEventListener("submit", addEmployee);
+    employeesList.addEventListener("click", Delete);
+
+
 }
 
 function getAllEmployees() {
@@ -57,7 +60,7 @@ function addEmployee(e) {
     if (employeeName === "" || employeeDepartment === "" || employeeSalary === "") {
         alert("please fill everything");
     } else {
-        request.post({ name: employeeName, department: employeeDepartment, salary: Number.employeeSalary })
+        request.post({ name: employeeName, department: employeeDepartment, salary: parseInt(employeeSalary) })
             .then(employee => {
                 ui.addEmployeeToUI(employee)
             }).catch(err => console.log(err));
@@ -66,3 +69,19 @@ function addEmployee(e) {
     ui.clearInputs();
     e.preventDefault();
 }
+
+
+function Delete(e) {
+    if (e.target.id === "delete-employee") {
+        deleteEmployee(e.target)
+    }
+}
+
+function deleteEmployee(targetEmployee) {
+    const id = targetEmployee.parentElement.previousElementSibling.previousElementSibling.textContent;
+    request.delete(id)
+        .then(message => {
+            ui.deleteEmployeeFromUI(targetEmployee.parentElement.parentElement);
+        }).catch(err => console.log(err))
+}
+

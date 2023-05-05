@@ -4,7 +4,6 @@ export class UI {
         this.departmentInput = document.getElementById("department")
         this.salaryInput = document.getElementById("salary");
         this.employeesList = document.getElementById("employees");
-        this.updateEmployeeButton = document.getElementById("update")
     }
 
     addAllEmployeesToUI(employees) {
@@ -16,8 +15,7 @@ export class UI {
                 <td>${element.department}</td>
                 <td>${element.salary}</td>
                 <td>${element.id}</td>
-                <td><a href=# id="update-employee" class="btn btn-danger">Guncelle</a></td>
-                <td><a href=# id="delete-employee" class="btn btn-danger">Sil</a></td>
+                <td><a href=# id="delete-employee" class="btn btn-danger">Remove</a></td>
                 </tr>
             `
         });
@@ -39,11 +37,14 @@ export class UI {
         <td>${employee.department}</td>
         <td>${employee.salary}</td>
         <td>${employee.id}</td>
-        <td><a href=# id="update-employee" class="btn btn-danger">Guncelle</a></td>
-        <td><a href=# id="delete-employee" class="btn btn-danger">Sil</a></td>
+        <td><a href=# id="delete-employee" class="btn btn-danger">Remove</a></td>
         </tr>
     `
 
+    }
+
+    deleteEmployeeFromUI(element) {
+        element.remove()
     }
 
 }
