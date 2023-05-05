@@ -19,8 +19,14 @@ const request = new Request("http://localhost:3000/employees");
 //     .catch(err => console.log(err));
 
 //PUT REQUEST
-request.put(1, { name: "ahmet", department: "advertise", salary: 2000 })
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+// request.put(1, { name: "ahmet", department: "advertise", salary: 2000 })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err));
 
+
+// DELETE REQUEST
+
+request.delete(2)
+    .then(message => console.log(message))
+    .catch(err => console.log(err));
 

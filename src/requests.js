@@ -34,4 +34,13 @@ export class Request {
         const responseData = await response.json();
         return responseData;
     }
+
+
+    async delete(id) {
+        const response = await fetch(this.url + "/" + id, {
+            method: "DELETE"
+
+        });
+        return "Data removed."
+    }
 }
