@@ -1,17 +1,22 @@
 {
-    "employees":[
-        {
-            "name":"keremcanim",
-            "department":"esogu",
-            "salary":10000,
-            "id":1
-        },
-        {
-            "name":"esmanur",
-            "department":"esogu",
-            "salary":20000,
-            "id":2
-        }
-    ]
-
+  "employees": [
+    {
+      "name": "keremcanim",
+      "department": "esogu",
+      "salary": 10000,
+      "id": 1
+    },
+    {
+      "name": "esmanur",
+      "department": "esogu",
+      "salary": 20000,
+      "id": 2
+    },
+    {
+      "name": "ali",
+      "department": "management",
+      "salary": 5000,
+      "id": 3
+    }
+  ]
 }
